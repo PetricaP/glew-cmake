@@ -24,13 +24,16 @@ project "GLEW"
         systemversion "10.0.17134.0"
         staticruntime "On"
         
-        files
-        {
-        }
+        files {
+			"include/wglew.h"
+		}
 
 		defines 
 		{ 
-            "_CRT_SECURE_NO_WARNINGS"
+            "_CRT_SECURE_NO_WARNINGS",
+			"WIN32_MEAN_AND_LEAN",
+			"VC_EXTRALEAN",
+			"GLEW_BUILD"
 		}
 
     filter { "system:windows", "configurations:Release" }
